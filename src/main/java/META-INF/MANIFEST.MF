@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Main-Class: DAAccess
+Class-Path: pf-cda-extensions-2.4.0.jar atmosphere-runtime-2.2.9.vaadin2
+ .jar pf-six-5.2.0.jar pf-textx-4.2.0.jar pf-cda-base-2.4.1.jar pf-pax-4
+ .2.0.jar pf-plugin-3.2.0.jar vaadin-shared-7.7.13.jar bcel-6.3.1.jar va
+ adin-sass-compiler-0.9.13.jar vaadin-slf4j-jdk14-1.6.1.jar vaadin-clien
+ t-compiled-7.7.13.jar pf-odem-1.2.0.jar pf-cda-core-2.4.1.jar pf-securi
+ ty-3.2.0.jar flute-1.3.0.gg2.jar vaadin-server-7.7.13.jar pf-bif-4.2.0.
+ jar pf-settings-4.2.0.jar pf-model-3.2.0.jar pf-logging-3.2.0.jar pf-re
+ flect-4.2.0.jar pf-nls-3.2.0.jar setuptools-40.8.0-py3.8.egg pf-applica
+ tion-3.2.0.jar vaadin-push-7.7.13.jar neo4j-java-driver-1.7.4.jar pf-cd
+ a-base-xpi-2.4.1.jar sac-1.3.jar pf-file-6.2.0.jar vaadin-themes-7.7.13
+ .jar pf-utilities-6.2.0.jar pf-text-8.2.0.jar jsoup-1.8.3.jar
+
