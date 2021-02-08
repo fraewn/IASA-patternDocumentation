@@ -9,7 +9,8 @@
 ### Build 
 1. Have your project database ready (running neo4j instance)
 
-2. Add database connection in the project: go to `org.patterncontrol.vaadin.model.util.ProjectDatabaseCredentials` and add project database credentials 
+2. Add database connection as `.ini` file to the project in the dao/util package `org.patterncontrol.vaadin.model.util
+.projectDatabaseCredentials.ini`. Use [remote] as key and fill portType (e.g. bolt), port, ip, username and password as values. 
 
 3. Execute maven commands: `clean install`
 
