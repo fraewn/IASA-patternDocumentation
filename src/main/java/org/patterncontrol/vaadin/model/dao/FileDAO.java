@@ -28,9 +28,9 @@ public class FileDAO {
 		return instance;
 	}
 
-	public DB_FileDTO getAllFilesByDev(String devevelopername) throws Exception, DatabaseException {
+	public DB_FileDTO getAllFiles() throws Exception, DatabaseException {
 		try ( Neo4jconnection connection = new Neo4jconnection(databaseUrl, username, password)) {
-			return connection.getAllFilesByDev(devevelopername);
+			return connection.getAllFiles();
 		}
 	}
 }

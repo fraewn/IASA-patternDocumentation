@@ -44,12 +44,6 @@ public class Neo4jconnection implements AutoCloseable{
 			return userdto;
 		}
 	}
-	//first try
-	public void exportAssosiations (){
-		try (Session session = driver.session()){
-
-		}
-	}
 
 	// get all patterns
 	public DB_PatternDTO getAllPatterns(){
@@ -79,15 +73,14 @@ public class Neo4jconnection implements AutoCloseable{
 	}
 
 	// get all files
-	public DB_FileDTO getAllFilesByDev(String username){
+	public DB_FileDTO getAllFiles(){
 		try ( Session session = driver.session() )
 		{
 			ArrayList<String> resultArray = session.writeTransaction( new TransactionWork<ArrayList<String>>()
 			{
 				@Override
 				public ArrayList<String> execute(Transaction tx ) {
-					StatementResult result = tx.run("MATCH(a:File)--(b:Developer {devname:$dev}) return a.filename",
-							parameters("dev", username));
+					StatementResult result = tx.run("MATCH(file:File) return file.filename");
 					ArrayList<String> resultArray = new ArrayList<>();
 					while(result.hasNext()){
 						Record record = result.next();

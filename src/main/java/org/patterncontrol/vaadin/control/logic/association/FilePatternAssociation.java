@@ -9,7 +9,6 @@ import org.patterncontrol.vaadin.model.dao.PatternDAO;
 import org.patterncontrol.vaadin.model.dto.*;
 import org.patterncontrol.vaadin.view.util.Roles;
 
-import javax.xml.crypto.Data;
 import java.util.List;
 
 public class FilePatternAssociation {
@@ -27,7 +26,7 @@ public class FilePatternAssociation {
 		FileDAO filedao = FileDAO.getInstance();
 		String user = (String) VaadinServletService.getCurrentServletRequest().getSession().getAttribute(Roles.CURRENTUSER);
 		DB_FileDTO db_filedto = DB_FileDTO.getInstance();
-		db_filedto = filedao.getAllFilesByDev(user);
+		db_filedto = filedao.getAllFiles();
 		return db_filedto;
 	}
 	public DB_PatternDTO getAllPatterns() throws Exception, DatabaseException{

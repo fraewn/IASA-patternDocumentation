@@ -23,18 +23,6 @@ public class ConfirmView extends VerticalLayout implements com.vaadin.navigator.
 		Page.getCurrent().setTitle("File/Pattern Association");
 		final VerticalLayout layout = new VerticalLayout();
 
-		Button logoutButton = new Button("Logout");
-		layout.addComponent(logoutButton);
-		logoutButton.addClickListener(new Button.ClickListener() {
-			@Override
-			public void buttonClick(Button.ClickEvent event) {
-				Login.logout();
-				// Navigate to login view
-				UI.getCurrent().getNavigator().navigateTo(Views.LOGINVIEW);
-				System.out.println("logged out");
-			}
-		});
-
 		Button goBackButton = new Button("Go to previous page");
 		layout.addComponent(goBackButton);
 		goBackButton.addClickListener(new Button.ClickListener() {

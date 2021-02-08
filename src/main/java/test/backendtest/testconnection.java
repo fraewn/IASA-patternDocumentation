@@ -1,6 +1,5 @@
 package test.backendtest;
 
-import org.patterncontrol.vaadin.control.logic.association.FilePatternAssociation;
 import org.patterncontrol.vaadin.control.service.Neo4jconnection;
 import org.patterncontrol.vaadin.model.dao.AssociationDAO;
 import org.patterncontrol.vaadin.model.dao.ComponentDAO;
@@ -87,7 +86,7 @@ public class testconnection {
 	public static boolean testGetFilesByUser(String user){
 		try (Neo4jconnection greeter = new Neo4jconnection("bolt://35.198.120.4:7687", "neo4j", "abc")) {
 			FileDAO fileDao = FileDAO.getInstance();
-			DB_FileDTO files = fileDao.getAllFilesByDev(user);
+			DB_FileDTO files = fileDao.getAllFiles();
 			System.out.println(files.getAllFiles().size());
 			return true;
 		} catch (Exception e) {

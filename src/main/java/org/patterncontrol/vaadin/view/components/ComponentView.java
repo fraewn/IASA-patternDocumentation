@@ -25,18 +25,6 @@ public class ComponentView extends VerticalLayout implements View{
 		Page.getCurrent().setTitle("File/Pattern Association");
 		final VerticalLayout layout = new VerticalLayout();
 
-		Button logoutButton = new Button("Logout");
-		layout.addComponent(logoutButton);
-		logoutButton.addClickListener(new Button.ClickListener() {
-			@Override
-			public void buttonClick(Button.ClickEvent event) {
-				Login.logout();
-				// Navigate to login view
-				UI.getCurrent().getNavigator().navigateTo(Views.LOGINVIEW);
-				System.out.println("logged out");
-			}
-		});
-
 		Button goBackButton = new Button("Go to previous page");
 		layout.addComponent(goBackButton);
 		goBackButton.addClickListener(new Button.ClickListener() {
@@ -44,6 +32,17 @@ public class ComponentView extends VerticalLayout implements View{
 			public void buttonClick(Button.ClickEvent event) {
 				// Navigate to login view
 				UI.getCurrent().getNavigator().navigateTo(Views.PATTERNTOCOMPONENTVIEW);
+				System.out.println("Navigate to pattern view");
+			}
+		});
+
+		Button goToBeginButton = new Button("Go back to start");
+		layout.addComponent(goToBeginButton);
+		goToBeginButton.addClickListener(new Button.ClickListener() {
+			@Override
+			public void buttonClick(Button.ClickEvent event) {
+				// Navigate to login view
+				UI.getCurrent().getNavigator().navigateTo(Views.FILETOPATTERNVIEW);
 				System.out.println("Navigate to pattern view");
 			}
 		});

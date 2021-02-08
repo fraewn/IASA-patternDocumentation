@@ -25,12 +25,11 @@ public class MyUI extends UI {
     @Override
     protected void init(VaadinRequest vaadinRequest) {
         Navigator nav = new Navigator(this, this);
-        nav.addView(Views.LOGINVIEW, LoginView.class);
         nav.addView(Views.FILETOPATTERNVIEW, FilesView.class);
         nav.addView(Views.PATTERNTOCOMPONENTVIEW, PatternView.class);
         nav.addView(Views.COMPONENTVIEW, ComponentView.class);
         nav.addView(Views.CONFIRMVIEW, ConfirmView.class);
-        UI.getCurrent().getNavigator().navigateTo(Views.LOGINVIEW);
+        UI.getCurrent().getNavigator().navigateTo(Views.FILETOPATTERNVIEW);
     }
 
     @WebServlet(urlPatterns = "/*", name = "MyUIServlet", asyncSupported = true)
